@@ -71,12 +71,14 @@ sudo dpkg -i webmin_2.202_all.deb
 | 403 Access denied Webmin | Выполнено sudo systemctl restart webmin |
 | Ошибка GPG при установке Webmin | Установка через dpkg -i напрямую |
 
-👥 Состав команды
-Имя	Логин	Роль
-Общий технический	cxuser	Работа над проектом
-Никодим	nikod	Личный профиль
-Дарья	daria	Второй участник
-Сергей       Третий участник
+## 👥 Состав команды
+
+| Имя | Логин | Роль |
+|-----|-------|------|
+| Общий технический | cxuser | Работа над проектом |
+| Никодим | nikod | Личный профиль |
+| Дарья | daria | Второй участник |
+| Сергей | serg | Третий участник |
 
 ## 📄 Команды для быстрого доступа
 
@@ -85,5 +87,5 @@ sudo dpkg -i webmin_2.202_all.deb
 | Подключение к общему профилю | ssh project-server |
 | Подключение к личному профилю | ssh personal-server |
 | Туннель для Webmin | ssh -L 8080:localhost:10000 cxuser@89.208.174.76 -p 2233 -N |
-| Webmin в браузере | `https://localhost:8080` |
-| Активация VENV | `source /home/cxuser/projects/myproject/venv/bin/activate` |
+| Webmin в браузере | https://localhost:8080 |
+| Активация VENV | source /home/cxuser/projects/myproject/venv/bin/activate |

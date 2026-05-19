@@ -42,7 +42,7 @@ Host personal-server
     Port 2233
     IdentityFile ~/Downloads/edu_key_ossh.pem
 
-    4. Создание проекта
+ 4. Создание проекта
 bash
 cd /home/cxuser/projects
 mkdir myproject
@@ -60,17 +60,16 @@ sudo dpkg -i webmin_2.202_all.deb
    ssh -L 8080:localhost:10000 cxuser@89.208.174.76 -p 2233 -N
    Доступ в браузере: https://localhost:8080
 
-   ❌ Ошибки и их решение
    ## ❌ Ошибки и их решение
 
 | Ошибка | Решение |
 |--------|---------|
-| `Permission denied (publickey)` | Ключ добавлен в SSH-агент через `ssh-add` |
+| Permission denied (publickey) | Ключ добавлен в SSH-агент через `ssh-add` |
 | VS Code не видит сервер | Установлен Remote-SSH, настроен `config` |
-| `ERR_CONNECTION_TIMED_OUT` порт 10000 | Использован SSH-туннель |
-| `bind: Permission denied` порт 10000 | Порт заменён на 8080 |
-| `403 Access denied` Webmin | Выполнено `sudo systemctl restart webmin` |
-| Ошибка GPG при установке Webmin | Установка через `dpkg -i` напрямую |
+| ERR_CONNECTION_TIMED_OUT порт 10000 | Использован SSH-туннель |
+| bind: Permission denied порт 10000 | Порт заменён на 8080 |
+| 403 Access denied Webmin | Выполнено sudo systemctl restart webmin |
+| Ошибка GPG при установке Webmin | Установка через dpkg -i напрямую |
 
 👥 Состав команды
 Имя	Логин	Роль
@@ -83,8 +82,8 @@ sudo dpkg -i webmin_2.202_all.deb
 
 | Действие | Команда |
 |----------|---------|
-| Подключение к общему профилю | `ssh project-server` |
-| Подключение к личному профилю | `ssh personal-server` |
-| Туннель для Webmin | `ssh -L 8080:localhost:10000 cxuser@89.208.174.76 -p 2233 -N` |
+| Подключение к общему профилю | ssh project-server |
+| Подключение к личному профилю | ssh personal-server |
+| Туннель для Webmin | ssh -L 8080:localhost:10000 cxuser@89.208.174.76 -p 2233 -N |
 | Webmin в браузере | `https://localhost:8080` |
 | Активация VENV | `source /home/cxuser/projects/myproject/venv/bin/activate` |
